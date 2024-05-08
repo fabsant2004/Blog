@@ -1,0 +1,575 @@
+/*Roboto Slaf 400, 700
+  Roboto 400 500 700 900
+  Roboto Mono 400 500 700
+  Son las fuentes que vamos a usar para la página
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+/*La línea 6 esta importando fuentes de google fonts*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 400;
+}
+
+.home-body{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ========== HEADER ========== */
+
+.header{
+  width: 100%;
+  height: 140px;
+  display: grid; /*Este comando hace que se guarde en un cuadrado el contenido que seleccionamos (header)*/
+  grid-template-rows: 1fr 1fr 1fr; /*Este comando hace que se creen filas en el grid*/
+  /*grid-template-columns: 1fr 1fr 1fr; Este comando hace que se creen columnas en el grid*/
+}
+
+.social{
+  background-color: #e6162e;
+  width: 100%;
+  height: 50px;
+  display: grid;
+}
+
+.social-icon{
+  width: 250px;
+  height: auto;
+  display: flex; /*Para usar FLEX debemos activarlo con el comando de esta línea, además este comando agrupa elementos*/
+  align-items: center; /*Este comando de FLEX hace que los elementos se centren en la mitad del header*/
+  justify-content: space-between; /*Este comando de FLEX permite darles un espacio a los elementos más ancho*/
+  justify-self: end; /*Este comando de FLEX hace que el grid se vaya al final (end), al centro (center) o al principio (start)*/
+  margin-right: 50px; /*Este comando le da un margen a los elementos para que se muevan a la izquierda en este caso (porque le da el borde hacía la derecha)*/
+}
+
+.social-icon a{
+  color: #ffff;
+  font-size: 28px; /*Este comando hace que se pinten de un color los iconos*/
+}
+
+.social-icon :hover{
+  color: #616161;
+}
+
+.nav{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90px;
+}
+
+.nav-logo{
+  margin-left: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.nav-link a{
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+/* ========== MAIN DE LA LANDING ========== */
+
+.home-main{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 82%;
+  background-image: url("../img/cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -0.3px;
+  
+}
+
+.main-container{
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 350px;
+  margin-top: 80px;
+}
+
+.main-container-text{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: #ffff;
+}
+
+.main-container-link{
+  background-color: #e6162e;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 45px;
+}
+
+.main-container-link:hover{
+  background-color: #b51d2f;
+}
+
+/* ========== PÁGINA DE BLOGS ========== */
+
+.blog-main{
+  display: grid;
+}
+
+.news{
+  background-color: #e6e9ed;
+  padding: 10px 80px 40px;
+}
+
+.news-content{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+}
+
+.news-content img{
+  grid-column: 1;
+  width: 85%;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.news-info{
+  grid-column: 2;
+}
+
+.news-info h2{
+  margin-top: 20px;
+}
+
+.news-info p{
+  margin: 30px 0;
+}
+
+/* ========== BOTÓN DE BLOGS ========== */
+
+.blogs-btn{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+/* ========== POSTS ========== */
+.posts{
+  padding: 0 80px 40px;
+}
+
+.posts h3{
+  border-bottom: 1px solid #cdd2da;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.posts-blog{
+  display: inline-block;
+  padding: 15px;
+  max-width: 32%;
+  margin-bottom: 50px;
+}
+
+.posts-blog img{
+  width: 100%;
+}
+
+.posts-blog h4{
+  margin: 20px, 0;
+}
+
+.posts-blog p{
+  margin-bottom: 35px;
+}
+
+/* ========== FOOTER ========== */
+
+footer{
+  width: 100%;
+  height: 80px;
+  background-color: #22272d;
+  border-top: 35px solid #e6162e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p{
+  color: #ffff;
+}
+
+/* ========== BLOG ========== */
+
+.main-blog{
+  padding: 0 80px 40px;
+}
+
+.main-blog-content img{
+  display: inline-block;
+  width: 500px;
+  border-radius: 25px;
+  justify-content: center;
+  margin-left: 400px;
+}
+
+.blog-content-article{
+  padding: 0 80px 40px;
+}
+
+.blog-content-article h4{
+  border-bottom: 1px solid #cdd2da;
+  padding: 20px 0;
+}
+
+.blog-content-article h1{
+  margin: 20px 0;
+  font-size: 35px;
+}
+
+/* ========== SECCION DE CONTACTO ========== */
+
+.section-contact{
+  width: 100%;
+  background-color: #e6e9ed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px 50px;
+}
+
+.contact{
+  display: flex;
+  margin: 20px 0px 20px 20px;
+}
+
+.contact img{
+  width: 120px;
+  display: inline-block;
+  padding: 20px;
+}
+
+
+.contact-info a{
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.contact-info p{
+  margin-top: 10px;
+}
+
+/* ========== PORFILE ========== */
+
+.profile{
+  padding: 70px 100px;
+  background-color: #e6e9ed;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.profile img{
+  width: 320px;
+  margin-right: 30px;
+}
+
+.project-container{
+  padding: 0 80px 40px;
+}
+
+.project-container h3{
+  border-bottom: 1px solid #cdd2da;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.project{
+  display: inline-block;
+  padding: 15px;
+  max-width: 32%;
+  margin-bottom: 50px;
+}
+
+.project h4{
+  margin: 20px;
+}
+
+.project p{
+  margin-bottom: 35px;
+}
+
+/* ========== BORDER RADIUS ========== */
+
+.imgpc{
+  border-radius: 25px;
+}
+
+.imgpc2{
+  border-radius: 25px;
+}
+
+/* ========== RETOQUES ========== */
+
+.border2{
+  /*border-bottom: 1px solid #cdd2da;*/
+  padding: 20px 0;
+  text-align: center;
+}
+
+.introh1{
+  border-bottom: 1px solid #cdd2da;
+}
+
+.ph3{
+  font-size: 30px;
+}
+
+.blogs-btn:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.linkrefH{
+  text-decoration: none;
+  color: #ff9100;
+  font-weight: bold;
+}
+
+.linkrefC{
+  text-decoration: none;
+  color: #009dff;
+  font-weight: bold;
+}
+
+.linkrefJ{
+  text-decoration: none;
+  color: #f2ff00;
+  font-weight: bold;
+}
+
+.linkrefV{
+  text-decoration: none;
+  color: #313131;
+  font-weight: bold;
+}
+
+.linkrefG{
+  text-decoration: none;
+  color: #12009b;
+  font-weight: bold;
+}
+
+.linkrefCS{
+  text-decoration: none;
+  color: #990ab9;
+  font-weight: bold;
+}
+
+.blogs-btn-project1{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.blogs-btn-project1:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project2{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.blogs-btn-project2:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project3{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.blogs-btn-project3:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project4{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 90px;
+}
+
+.blogs-btn-project4:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project5{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 100px;
+}
+
+.blogs-btn-project5:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project6{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.blogs-btn-project6:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project7{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.blogs-btn-project7:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project8{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 120px;
+}
+
+.blogs-btn-project8:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project9{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-left: 70px;
+}
+
+.blogs-btn-project9:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn-project10{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-right: 60px;
+}
+
+.blogs-btn-project10:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.introh1{
+  text-align: center;
+}
+
+.pp{
+  border-radius: 25px;
+}
+
+.blogs-btn-project11{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.blogs-btn-project11:hover{
+  background-color: #535353;
+  color: red;
+}
+
+.blogs-btn12{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6162e;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.blogs-btn12:hover{
+  background-color: #535353;
+  color: red;
+}
